@@ -1,0 +1,30 @@
+#center-box{
+	margin: 100px auto;
+	width: 300px;
+	text-align: center;
+}
+#center-box button{
+	background-color: white;
+	border-radius: 5px;
+	border: 2px solid black;
+	padding: 5px 10px;
+	margin: 0 5px;
+	cursor: pointer;
+}
+#center-box button:hover{
+	color: white;
+}
+#center-box button.decrease:hover{
+	background-color: red;
+}
+#center-box button.reset:hover{
+	background-color: black;
+}
+#center-box button.increase:hover{
+	background-color: green;
+}
+#counterValue{
+	font-size: 70px;
+	font-weight: bold;
+
+}

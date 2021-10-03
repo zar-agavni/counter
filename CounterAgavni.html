@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="center-box">
+		<h1>Counter
+			<div id="counterValue">0</div>
+		</h1>
+		<button class="decrease" onclick="decrease()">Decrease</button>
+		<button class="reset" onclick="reset()">Reset</button>
+		<button class="increase" onclick="increase()">Increase</button>
+	</div>
+	<script type="text/javascript">
+		var counter = 0;
+		var counterValue = document.getElementById("counterValue");
+		function decrease(){
+			counter = counter-1
+			updateCounter(counter)
+		}
+		function reset(){
+			counter = 0
+			updateCounter(counter)
+		}
+		function increase(){
+			counter = counter+1
+			updateCounter(counter)
+		}
+		function updateCounter(currentCounterValue){
+			console.log(currentCounterValue)
+			counterValue.innerHTML = currentCounterValue;
+			if (currentCounterValue < 0){
+				counterValue.style.color = "red";
+			}
+			if (currentCounterValue == 0){
+				counterValue.style.color = "black";
+			}
+			if (currentCounterValue > 0){
+				counterValue.style.color = "green";
+			}
+
+		}
+
+
+	</script>
+</body>
+</html>
